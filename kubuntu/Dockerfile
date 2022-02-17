@@ -14,7 +14,7 @@ RUN mkdir /home/dev
 RUN apt update && apt -y install nano git tar gzip build-essential curl alien openjdk-8-jdk nginx
 
 ### nodejs 설치
-RUN curl -sL https://deb.nodesource.com/setup_17.x -o nodesource_setup.sh && bash nodesource_setup.sh && apt -y install nodejs
+RUN curl -sL https://deb.nodesource.com/setup_17.x -o nodesource_setup.sh && bash nodesource_setup.sh && apt -y install nodejs net-tools
 
 ### 서비스 배포
 EXPOSE 80 8080

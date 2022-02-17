@@ -1,0 +1,21 @@
+### 빌드할 버전
+version: '2'
+
+### 서비스 설정
+services:
+  kubuntu:
+    image: ubuntu:20.04
+    restart: always
+    volumes:
+      - ./ubuntu:/app
+    ports:
+      - 80:80
+    networks:
+      - BASE_NET
+
+volumes:
+  app_db_volume:
+
+networks:
+  BASE_NET:
+    driver: bridge
